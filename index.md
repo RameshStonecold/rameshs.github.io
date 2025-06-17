@@ -8,4 +8,4 @@ I am looking for job right now for position of Sr Java developer.
 
 In this blog i will share my interview preparation, my understanding of java 
 
-articles which learned from different resources and many more. 
+from my past experience and demo articles of spring boot etc. 
