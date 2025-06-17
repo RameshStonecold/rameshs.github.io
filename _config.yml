@@ -40,6 +40,6 @@ defaults:
       type: post
     values:
       tags: Other
-            Interview Preparation
-            Spring Boot
+            Interview-preparation
+            Spring-Boot
             Microservices
