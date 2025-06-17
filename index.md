@@ -1,5 +1,11 @@
-Here you can say lots of fun things about your site.
+Hi Guys,
 
-Maybe say a some things about yourself.
+I am Ramesh a software techie. | java developer 
 
-Or maybe what you plan to blog about.
+Due to some reasons. I left my job and had break. 
+
+It's around nearly 1 year of career gap. I am hunting the job right now.
+
+In this blog i will share my interview preparation, post articles 
+
+which learned from different resources and many more. 
