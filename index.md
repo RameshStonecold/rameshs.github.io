@@ -1,11 +1,11 @@
 Hi Guys,
 
-I am Ramesh a software techie. | java developer 
+I am Ramesh a software techie, java developer domain
 
-Due to some reasons. I left my job and had break. 
+Due to some reasons. I had a long career gap. 
 
-It's around nearly 1 year of career gap. I am hunting the job right now.
+I am looking for job right now for position of Sr Java developer.
 
-In this blog i will share my interview preparation, post articles 
+In this blog i will share my interview preparation, my understanding of java 
 
-which learned from different resources and many more. 
+articles which learned from different resources and many more. 
