@@ -1,4 +1,4 @@
-## Restart of my java developer career after long career gap
+## Restart of my java developer career after long career gap and interview preparation
 
 In this post, I'm kicking off my career journey with some interview prep and sharing daily achievements, so that I can ace those interviews together. 
 
