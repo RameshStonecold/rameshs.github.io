@@ -35,10 +35,10 @@ titles_from_headings:
   collections: true
 
 header_pages:
-  - resume.html
+  #- resume.html
   - archive.html
 #  - books.md # Commenting out for now as putting more focus on pluralsight than reading
-  - bookmarks.md
+ # - bookmarks.md
 
 defaults:
   - scope:
