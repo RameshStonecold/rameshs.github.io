@@ -45,6 +45,6 @@ header_pages:
 defaults:
   - scope:
       path: ""
-      type: post
+      type: post springboot
     values:
       tags: 
