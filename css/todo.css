@@ -1,0 +1,281 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 30px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+}
+
+.calendar-section, .todo-section {
+    flex: 1;
+    min-width: 300px; /* Ensures sections don't get too small */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.calendar-section {
+    background-color: #e8f5e9; /* Light green background */
+}
+
+.todo-section {
+    background-color: #fce4ec; /* Light pink background */
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Calendar Styling */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.calendar-header {
+    grid-column: span 7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #4CAF50;
+}
+
+.day-name {
+    font-weight: bold;
+    text-align: center;
+    color: #555;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+}
+
+.calendar-day:hover {
+    background-color: #d1e7d1;
+}
+
+.calendar-day.current-month {
+    background-color: #e0f2f1;
+}
+
+.calendar-day.today {
+    background-color: #81c784;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-day.selected-date {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 0 2px #4CAF50; /* Highlight border */
+}
+
+.calendar-day.other-month {
+    color: #ccc;
+    pointer-events: none; /* Disable interaction with other month days */
+}
+
+.date-display {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* To-Do Form Styling */
+#todoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+#todoForm label {
+    font-weight: bold;
+    color: #555;
+}
+
+#todoForm input[type="text"],
+#todoForm input[type="time"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.time-inputs {
+    display: flex;
+    gap: 15px;
+}
+
+.time-inputs input {
+    flex: 1;
+}
+
+#todoForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#todoForm button:hover {
+    background-color: #45a049;
+}
+
+/* To-Do List Styling */
+.todo-list-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+#todoList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#todoList li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+#todoList li:last-child {
+    border-bottom: none;
+}
+
+#todoList li.completed span.task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.todo-item-details {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.todo-item-details strong {
+    color: #4CAF50;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.todo-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.todo-actions .check-btn {
+    color: #2196F3; /* Blue check */
+}
+
+.todo-actions .delete-btn {
+    color: #f44336; /* Red delete */
+}
+
+.todo-actions button:hover {
+    background-color: #eee;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .calendar-section, .todo-section {
+        width: 100%;
+        max-width: 500px; /* Limit width on smaller screens */
+    }
+    .time-inputs {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
