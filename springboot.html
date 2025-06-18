@@ -1,0 +1,34 @@
+---
+layout: page
+title: Spring Boot
+---
+
+<a href="/archive.html">Sort by category</a>
+{%- assign allposts = site.sbposts | sort_natural: "date" | reverse %}
+
+{%- assign postsByYearMonth = allposts | group_by_exp:"allposts", "allposts.date | date: '%Y %B'"  %}
+
+{%- for yearMonth in postsByYearMonth %}
+<h3>{{ yearMonth.name }}</h3>
+<ul>
+    {%- for sbpost in yearMonth.items %}
+    <li><a href="{{ sbpost.url }}">{{ sbpost.title }}</a></li>
+    {%- endfor %}
+</ul>
+{%- endfor %}
+<!-- <a href="/archive-date.html">Sort by date</a> -->
+
+{% for tag in site.tags %}
+<h3>{{- tag[0] -}}</h3>
+<ul>
+    {%- for sbpost in tag[1] %}
+    <li><a href="{{ sbpost.url }}">{{ sbpost.date | date: "%b %Y" }} - {{ sbpost.title }}</a></li>
+    {%- endfor %}
+</ul>
+{%- endfor %}
+<h3>Personal</h3>
+<ul>
+    {%- for sbpost in site.personal %}
+    <li><a href="{{ sbpost.url }}">{{ sbpost.date | date: "%b %Y" }} - {{ sbpost.title }}</a></li>
+    {%- endfor %}
+</ul>
