@@ -38,7 +38,7 @@ header_pages:
    - archive.html
    - microservices.md
    - springboot.md
-   - todo.md
+   - todo.html
 #  - books.md # Commenting out for now as putting more focus on pluralsight than reading
  # - bookmarks.md
 
