@@ -1,0 +1,27 @@
+---
+layout: page
+title: Core Java
+---
+
+{% assign cj_tags_raw = "" | split: "," %}
+{% assign all_cjposts = site.cjposts %}
+{% for cjpost in all_cjposts %}
+{% if cjpost.tags %}
+{% assign cj_tags_raw = cj_tags_raw | concat: cjpost.tags %}
+{% endif %}
+{% endfor %}
+
+{% assign all_unique_cj_tags = cj_tags_raw | uniq  %}
+{%- for tag in all_unique_cj_tags %}
+<h4>{{ tag }}</h4>
+<ul>
+    {%- assign posts_with_this_tag = all_cjposts | where_exp: "post", "post.tags contains tag" %}
+    {%- if posts_with_this_tag.size > 0 %}
+    {%- for post in posts_with_this_tag %}
+    <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>
+    {%- endfor %}
+    {%- else %}
+    <li>No posts yet with this tag.</li>
+    {%- endif %}
+</ul>
+{%- endfor %}

@@ -38,6 +38,7 @@ header_pages:
    - archive.html
    - microservices.html
    - springboot.html
+   - corejava.html
    - todo.html
 #  - books.md # Commenting out for now as putting more focus on pluralsight than reading
  # - bookmarks.md
@@ -53,7 +54,9 @@ collections:
   msposts: # Assuming 'personal' is also a custom collection you intend to use
     output: true
     permalink: /microservices/:title/
-
+  cjposts: # Assuming 'personal' is also a custom collection you intend to use
+    output: true
+    permalink: /java/:title/
 
 defaults:
   - scope:
@@ -90,3 +93,15 @@ defaults:
         - Interview QAns
         - Challenges
 
+  - scope:
+      path: ""
+      type: cjposts
+    values:
+      layout: post
+      category: Core Java
+      tags:
+        - Core Java
+        - Collections
+        - Java 8 to latest features
+        - Multithreading
+        - Interview QAns
