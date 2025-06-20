@@ -1,11 +1,8 @@
 Hi Guys,
 
-I am Ramesh a software techie, java developer domain
+I am Ramesh a software java developer.
 
-Due to some reasons. I had a long career gap. 
+In this blog i will share my understandings of java, career related stuff, tutorials and challenges which i faced.
 
-I am looking for job right now for position of Sr Java developer.
+Currently I am looking for job for Sr Java developer.
 
-In this blog i will share my interview preparation, my understanding of java 
-
-from my past experience and demo articles of spring boot etc. 

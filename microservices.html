@@ -1,0 +1,30 @@
+---
+layout: page
+title: Microservices
+---
+
+{% assign ms_tags_raw = "" | split: "," %}
+{% assign all_msposts = site.msposts %}
+{% for mspost in site.msposts %}
+{% if mspost.tags %}
+{% assign ms_tags_raw = ms_tags_raw | concat: mspost.tags %}
+{% endif %}
+{% endfor %}
+
+{% assign all_unique_ms_tags = ms_tags_raw | uniq  %}
+{%- for tag in all_unique_ms_tags %}
+<h4>{{ tag }}</h4>
+<ul>
+    {%- assign posts_with_this_tag = all_msposts | where_exp: "post", "post.tags contains tag" %}
+    {%- if posts_with_this_tag.size > 0 %}
+    {%- for post in posts_with_this_tag %}
+    <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>
+    {%- endfor %}
+    {%- else %}
+    <li>No posts yet with this tag.</li>
+    {%- endif %}
+</ul>
+{%- endfor %}
+
+
+

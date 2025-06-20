@@ -36,15 +36,58 @@ titles_from_headings:
 
 header_pages:
    - archive.html
-   - microservices.md
-   - springboot.md
+   - microservices.html
+   - springboot.html
    - todo.html
 #  - books.md # Commenting out for now as putting more focus on pluralsight than reading
  # - bookmarks.md
 
+# Define your custom collections here!
+collections:
+  sbposts: # This name 'sbposts' will be accessible as site.sbposts
+    output: true # This makes Jekyll generate individual HTML pages for each post in _sbposts
+    permalink: /springboot/:title/ # Optional: Define a custom permalink structure for these posts
+  personal: # Assuming 'personal' is also a custom collection you intend to use
+    output: true
+    permalink: /personal/:title/
+  msposts: # Assuming 'personal' is also a custom collection you intend to use
+    output: true
+    permalink: /microservices/:title/
+
+# The github repo that is to be used for looking up comments
+#comments_repo: RameshStonecold/blog-comments.github.io
+
 defaults:
   - scope:
       path: ""
-      type: post sbpost
+      type: posts
     values:
-      tags: 
+      layout: post
+      category: Blog Archive
+      tags:
+        - Other
+        - Spring Boot
+        - Microservices
+        - Challenges
+
+  - scope:
+      path: ""
+      type: sbposts # This should match the collection name defined above
+    values:
+      layout: post # Or a custom layout like 'springboot_post' if you create one
+      category: Spring Boot # Optional: Assign a default category
+      tags:
+        - Spring Boot Tutorials
+        - Interview QAns
+        - Challenges
+
+  - scope:
+      path: ""
+      type: msposts
+    values:
+      layout: post
+      category: Microservices
+      tags:
+        - Microservices Tutorial
+        - Interview QAns
+        - Challenges

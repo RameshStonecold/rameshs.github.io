@@ -2,33 +2,61 @@
 layout: page
 title: Spring Boot
 ---
+<p>Spring boot is the one of the modules of spring io project which is used for rapid development of spring based enterprise application, which reduces the boiler plate code, opioniated approach.
+</p>
 
-<a href="/archive.html">Sort by category</a>
-{%- assign allposts = site.sbposts | sort_natural: "date" | reverse %}
+<!--<a href="/springboot.html">Sort by category</a>-->
+<!--{%- assign all_sbposts = site.sbposts | sort_natural: "date" | reverse %}-->
 
-{%- assign postsByYearMonth = allposts | group_by_exp:"allposts", "allposts.date | date: '%Y %B'"  %}
+<!--{%- assign sbpostsByYearMonth = all_sbposts | group_by_exp:"sbposts", "sbposts.date | date: '%Y %B'"  %}-->
 
-{%- for yearMonth in postsByYearMonth %}
-<h3>{{ yearMonth.name }}</h3>
+<!--{%- for yearMonth in sbpostsByYearMonth %}-->
+<!--<h3>{{ yearMonth.name }}</h3>-->
+<!--<ul>-->
+<!--    {%- for post in yearMonth.items %}-->
+<!--    <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>-->
+<!--    {%- endfor %}-->
+<!--</ul>-->
+<!--{%- endfor %}-->
+
+
+<!--{% for tag in site.tags %}-->
+<!--<h3>{{- tag[0] -}}</h3>-->
+<!--<ul>-->
+<!--    {%- for post in tag[1] %}-->
+<!--    <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>-->
+<!--    {%- endfor %}-->
+<!--</ul>-->
+<!--{%- endfor %}-->
+
+
+
+<!--<ul>-->
+<!--    {%- for post in site.sbposts | sort_natural: "date" | reverse %}-->
+<!--    <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>-->
+<!--    {%- endfor %}-->
+<!--</ul>-->
+
+
+{% assign sb_tags_raw = "" | split: "," %}
+{% assign all_sbposts = site.sbposts %}
+{% for sbpost in site.sbposts %}
+{% if sbpost.tags %}
+{% assign sb_tags_raw = sb_tags_raw | concat: sbpost.tags %}
+{% endif %}
+{% endfor %}
+
+{% assign all_unique_sb_tags = sb_tags_raw | uniq  %}
+{%- for tag in all_unique_sb_tags %}
+<h4>{{ tag }}</h4>
 <ul>
-    {%- for sbpost in yearMonth.items %}
-    <li><a href="{{ sbpost.url }}">{{ sbpost.title }}</a></li>
+    {%- assign posts_with_this_tag = all_sbposts | where_exp: "post", "post.tags contains tag" %}
+    {%- if posts_with_this_tag.size > 0 %}
+    {%- for post in posts_with_this_tag %}
+    <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>
     {%- endfor %}
+    {%- else %}
+    <li>No posts yet with this tag.</li>
+    {%- endif %}
 </ul>
 {%- endfor %}
-<!-- <a href="/archive-date.html">Sort by date</a> -->
-
-{% for tag in site.tags %}
-<h3>{{- tag[0] -}}</h3>
-<ul>
-    {%- for sbpost in tag[1] %}
-    <li><a href="{{ sbpost.url }}">{{ sbpost.date | date: "%b %Y" }} - {{ sbpost.title }}</a></li>
-    {%- endfor %}
-</ul>
-{%- endfor %}
-<h3>Personal</h3>
-<ul>
-    {%- for sbpost in site.personal %}
-    <li><a href="{{ sbpost.url }}">{{ sbpost.date | date: "%b %Y" }} - {{ sbpost.title }}</a></li>
-    {%- endfor %}
-</ul>

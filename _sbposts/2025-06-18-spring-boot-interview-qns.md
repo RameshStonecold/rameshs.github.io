@@ -1,3 +1,11 @@
+---
+layout: post # Use the default post layout, or 'springboot_post' if you create one
+title: "Top most spring boot repeated interview Questions and answers"
+categories: Spring Boot # Example categories
+tags: [Interview QAns] # All Spring boot tags   [ Spring Boot Tutorials, Interview QAns, Challenges]
+---
+
+
 ##Top most repeated interview Questions and answers
 
 1. What is Spring boot ? why it important ?
