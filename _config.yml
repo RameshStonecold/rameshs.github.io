@@ -54,8 +54,6 @@ collections:
     output: true
     permalink: /microservices/:title/
 
-# The github repo that is to be used for looking up comments
-#comments_repo: RameshStonecold/blog-comments.github.io
 
 defaults:
   - scope:
@@ -91,3 +89,4 @@ defaults:
         - Microservices Tutorial
         - Interview QAns
         - Challenges
+

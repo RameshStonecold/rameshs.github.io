@@ -5,39 +5,6 @@ title: Spring Boot
 <p>Spring boot is the one of the modules of spring io project which is used for rapid development of spring based enterprise application, which reduces the boiler plate code, opioniated approach.
 </p>
 
-<!--<a href="/springboot.html">Sort by category</a>-->
-<!--{%- assign all_sbposts = site.sbposts | sort_natural: "date" | reverse %}-->
-
-<!--{%- assign sbpostsByYearMonth = all_sbposts | group_by_exp:"sbposts", "sbposts.date | date: '%Y %B'"  %}-->
-
-<!--{%- for yearMonth in sbpostsByYearMonth %}-->
-<!--<h3>{{ yearMonth.name }}</h3>-->
-<!--<ul>-->
-<!--    {%- for post in yearMonth.items %}-->
-<!--    <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>-->
-<!--    {%- endfor %}-->
-<!--</ul>-->
-<!--{%- endfor %}-->
-
-
-<!--{% for tag in site.tags %}-->
-<!--<h3>{{- tag[0] -}}</h3>-->
-<!--<ul>-->
-<!--    {%- for post in tag[1] %}-->
-<!--    <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>-->
-<!--    {%- endfor %}-->
-<!--</ul>-->
-<!--{%- endfor %}-->
-
-
-
-<!--<ul>-->
-<!--    {%- for post in site.sbposts | sort_natural: "date" | reverse %}-->
-<!--    <li><a href="{{ post.url }}">{{ post.date | date: "%b %Y" }} - {{ post.title }}</a></li>-->
-<!--    {%- endfor %}-->
-<!--</ul>-->
-
-
 {% assign sb_tags_raw = "" | split: "," %}
 {% assign all_sbposts = site.sbposts %}
 {% for sbpost in site.sbposts %}
