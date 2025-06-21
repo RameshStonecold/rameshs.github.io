@@ -8,8 +8,8 @@ layout: default
     {%- endif -%}
 
     {{ content }}
-
     {% assign all_posts_combined =  site.msposts | concat: site.sbposts %}
+
     {% assign all_posts_sorted = all_posts_combined | sort_natural: "date" | reverse %}
 
     {%- if site.posts.size > 0 -%}

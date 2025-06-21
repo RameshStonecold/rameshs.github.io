@@ -100,8 +100,8 @@ defaults:
       layout: post
       category: Core Java
       tags:
-        - Core Java
+        - Core Java               # Match exactly
         - Collections
-        - Java 8 to latest features
+        - Java 8 to latest features # Match exactly
         - Multithreading
         - Interview QAns

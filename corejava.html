@@ -3,9 +3,10 @@ layout: page
 title: Core Java
 ---
 
+
 {% assign cj_tags_raw = "" | split: "," %}
 {% assign all_cjposts = site.cjposts %}
-{% for cjpost in all_cjposts %}
+{% for cjpost in site.cjposts %}
 {% if cjpost.tags %}
 {% assign cj_tags_raw = cj_tags_raw | concat: cjpost.tags %}
 {% endif %}
@@ -25,3 +26,5 @@ title: Core Java
     {%- endif %}
 </ul>
 {%- endfor %}
+
+
