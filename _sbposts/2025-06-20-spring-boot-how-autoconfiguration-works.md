@@ -9,7 +9,6 @@ tags: [Spring Boot Tutorials] # All Spring boot tags   [ Spring Boot Tutorials, 
 ## How Spring boot auto configuration works
 
 
-Hi Folks !,
-
-This post we will see how spring boot works internally. When spring boot starts up.
+Before diving how spring boot autoconfiguration works. Let's talk about first what is Spring boot autoconfiguration 
+according to the spring io doc. 
 
