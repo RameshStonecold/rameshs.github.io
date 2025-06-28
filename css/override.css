@@ -43,3 +43,78 @@ hr {
   font-size: 2.5em;
   opacity: 0.3;
 }
+
+/* dark mode applied css*/
+
+/* Base (Light Mode) Variables */
+:root {
+    --bg-color: #f0f2f5;        /* Light background */
+    --text-color: #333;         /* Dark text */
+    --header-bg: #fff;          /* White header background */
+    --footer-bg: #ccc;          /* Light grey footer */
+}
+
+/* Dark Mode Variables (applied when body has .dark-mode class) */
+body.dark-mode {
+    --bg-color: #1a1a1a;        /* Dark background */
+    --text-color: #f0f0f0;      /* Light text */
+    --header-bg: #2b2b2b;       /* Darker header background */
+    --footer-bg: #3a3a3a;       /* Darker grey footer */
+}
+
+/* General Body Styling */
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Header Styling */
+header {
+    text-color: #f0f0f0;
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main Content Styling */
+main {
+    background-color: var(--header-bg); /* Use header-bg for content box background */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 2px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button Styling */
+#mode-toggle {
+
+    position: fixed; /* Positions the button relative to the viewport */
+    top: 10px;       /* 10 pixels from the top edge of the viewport */
+    right: 200px;
+
+    background-color: #007bff; /* A consistent blue for the button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#mode-toggle:hover {
+    background-color: #0056b3;
+}
